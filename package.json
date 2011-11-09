@@ -1,6 +1,6 @@
 {
     "name": "widget",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Basic DOM widget library for Ender",
     "keywords": ["ender", "widget", "view", "jQuery UI"],
     "author": "Andrew McCollum <amccollum@gmail.com>",

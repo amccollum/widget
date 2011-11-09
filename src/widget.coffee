@@ -18,7 +18,9 @@
             
             @create()
             @el.trigger 'create', this
-            @el.bind 'remove', () => @destroy()
+            @el.bind 'remove', (event) =>
+                @destroy() if event.target is @el
+                    
             @init()
 
         $: (selector) -> $(selector, @el)

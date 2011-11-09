@@ -5,21 +5,22 @@
     triggerRemoveEvent = (els) ->
         els.deepEach (el) ->
             $(el).trigger('remove').unbind()
-            
+            return
+
         return
     
     $.ender({
         empty: () ->
             triggerRemoveEvent(this.children())
-            return empty.apply(this)
+            return empty.apply(this, arguments)
         
         remove: () ->
             triggerRemoveEvent(this)
-            return remove.apply(this)
+            return remove.apply(this, arguments)
             
         replaceWith: () ->
             triggerRemoveEvent(this)
-            return replaceWith.apply(this)
+            return replaceWith.apply(this, arguments)
             
     }, true)
         
